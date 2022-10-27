@@ -1,0 +1,22 @@
+Name: Ramon Nelson,  Position: Defender,  Jersey: 57,  Grade: 67
+
+Name: Roberto Anderson,  Position: Goal Keeper,  Jersey: 42,  Grade: 57
+
+Name: Wade Williams,  Position: Attacker,  Jersey: 37,  Grade: 33
+
+Name: Miles Smith,  Position: Defender,  Jersey: 30,  Grade: 35
+
+Name: Roberto Anderson,  Position: Defender,  Jersey: 54,  Grade: 26
+
+Name: Brian Miller,  Position: Defender,  Jersey: 28,  Grade: 4
+
+Name: Ramon Nelson,  Position: Midfielder,  Jersey: 2,  Grade: 30
+
+Name: Dave Harris,  Position: Attacker,  Jersey: 17,  Grade: 40
+
+Name: Lewis Richards,  Position: Midfielder,  Jersey: 22,  Grade: 10
+
+Name: Seth Thomas,  Position: Defender,  Jersey: 19,  Grade: 69
+
+Name: Wade Williams,  Position: Defender,  Jersey: 46,  Grade: 14
+
