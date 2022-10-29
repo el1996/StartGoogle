@@ -24,7 +24,7 @@ public class Stock {
             System.out.println("Name: " + item.getName() + " ,Weight: " + item.getWeight() + " ,Date: " + item.getExpirationDate() + " ,Type: " + item.getType());
         }
 
-        return 0;
+        return 2;
     }
 
     void generateItemAndAddToList(String name, double weight, LocalDate expirationDate, ProductType type) {
