@@ -18,13 +18,11 @@ public class Stock {
         this.itemList = itemList;
     }
 
-    public int printDates() {
+    public void printDates() {
 
         for (Item item: itemList) {
             System.out.println("Name: " + item.getName() + " ,Weight: " + item.getWeight() + " ,Date: " + item.getExpirationDate() + " ,Type: " + item.getType());
         }
-
-        return 2;
     }
 
     void generateItemAndAddToList(String name, double weight, LocalDate expirationDate, ProductType type) {
