@@ -11,7 +11,7 @@ import java.util.Map;
 
 public class Exceptions {
 
-    static Map<?,?> dataMap;
+    static private Map<String,String> dataMap;
     static void readFromJsonFile() throws IOException {
         // create Gson instance
         Gson gson = new Gson();
@@ -71,7 +71,7 @@ public class Exceptions {
             try {
                 createFile();
                 readFromJsonFile();
-                readFromJsonFile();
+              //  readFromJsonFile();
                 requestConfigKey(key);
 
             } catch (NullPointerException nullPointerException) {
