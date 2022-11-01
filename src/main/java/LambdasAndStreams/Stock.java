@@ -31,8 +31,8 @@ public class Stock {
 
         itemList.add(item);
 
-        itemList = itemList.stream()
-                .sorted(Comparator.comparing(i -> i.getExpirationDate()))
+        itemList = itemList.stream()         // i -> i.getExpirationDate()
+                .sorted(Comparator.comparing( Item :: getExpirationDate ))
                 .collect(Collectors.toList());
     }
 
@@ -47,20 +47,22 @@ public class Stock {
 
         return itemList.stream()
                 .filter(i -> i.getExpirationDate().isAfter(LocalDate.now().minusDays(1)))
-                .min(Comparator.comparing(item -> item.getExpirationDate())).get();
+                .min(Comparator.comparing(Item::getExpirationDate)).get();
+                                        //item -> item.getExpirationDate()
     }
 
 
      List<Item> getAlphabeticallySortedItems() {
 
         return itemList.stream()
-                .sorted(Comparator.comparing(i -> i.getName()))
+                                           //i -> i.getName()
+                .sorted(Comparator.comparing(Item::getName))
                 .collect(Collectors.toList());
     }
 
-    Item getItemByName(String name) {
+    Optional<Item> getItemByName(String name) {
 
-        return itemList.stream().filter(i -> i.getName().equalsIgnoreCase(name)).findFirst().get();
+        return itemList.stream().filter(i -> i.getName().equalsIgnoreCase(name)).findFirst();
     }
 
     List<String> getListNamesAboveWeight(double weight) {

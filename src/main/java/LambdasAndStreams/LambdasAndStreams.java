@@ -3,6 +3,7 @@ package LambdasAndStreams;
 import java.time.LocalDate;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 
 public class LambdasAndStreams {
 
@@ -10,6 +11,7 @@ public class LambdasAndStreams {
 
         Stock stock = new Stock();
 
+        // can be generated randomly Name Date Item can be generated randomly
         stock.generateItemAndAddToList("ddf",9.5, LocalDate.now().plusYears(1), Item.ProductType.CLOSET);
         stock.generateItemAndAddToList("xs",2.8, LocalDate.now().minusYears(1), Item.ProductType.CHAIR);
         stock.generateItemAndAddToList("a",4.5, LocalDate.now(), Item.ProductType.CHAIR);
@@ -36,10 +38,8 @@ public class LambdasAndStreams {
         }
 
         System.out.println("\nItem by name: ");
-        Item w = stock.getItemByName("xs");
-        if (w != null) {
-            System.out.println(w.getName());
-        }
+        Optional<Item> w = stock.getItemByName("xs");
+        w.ifPresent(item -> System.out.println(item.getName()));
 
         System.out.println("\nNames of items above specific weight: ");
         List<String> b = stock.getListNamesAboveWeight(3.0);
