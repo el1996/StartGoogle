@@ -2,8 +2,6 @@ package ClassesAndInterfaces;
 
 import java.util.Random;
 
-import static ClassesAndInterfaces.Farm.createID;
-
 public abstract class AbstractAnimal implements Animal {
 
     public enum Gender {
@@ -22,31 +20,25 @@ public abstract class AbstractAnimal implements Animal {
         this.weight = weight;
     }
 
-    @Override
-    public void setGender(Gender gender) {
+    public void setGender(AbstractAnimal.Gender gender) {
         this.gender = gender;
     }
-    @Override
-    public Gender getGender() {
+    public AbstractAnimal.Gender getGender() {
         return gender;
     }
 
-    @Override
     public int getId() {
         return id;
     }
 
-    @Override
     public void setId(int id) {
         this.id = id;
     }
 
-    @Override
     public int getWeight() {
         return weight;
     }
 
-    @Override
     public void setWeight(int weight) {
         this.weight = weight;
     }

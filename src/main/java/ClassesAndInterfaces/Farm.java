@@ -31,7 +31,7 @@ public class Farm {
 
     void doMate(AbstractAnimal animal1, AbstractAnimal animal2) {
 
-        AbstractAnimal newAnimal = animal1.mate(animal2);
+        AbstractAnimal newAnimal = (AbstractAnimal) animal1.mate(animal2);
         if (newAnimal != null) {
             animalList.add(newAnimal);
         }
