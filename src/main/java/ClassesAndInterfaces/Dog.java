@@ -14,9 +14,9 @@ public class Dog extends AbstractAnimal{
     }
 
     @Override
-    public AbstractAnimal mate(AbstractAnimal partner) {
-
-        if (partner.getGender() != this.gender) {
+    public Animal mate(Animal partner) {
+        Dog dog = (Dog) partner;
+        if (dog.getGender() != this.gender) {
             return new Dog(createID(), generateRandomGender(), generateRandomWeight());
         }
 

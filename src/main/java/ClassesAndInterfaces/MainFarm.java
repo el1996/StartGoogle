@@ -24,6 +24,11 @@ public class MainFarm {
 
         requestedAnimal = farmer.getFarm().giveAnimalToOutsideUsers(requestedAnimal);
 
-
+        WoodenHorse woodenHorse = new WoodenHorse();
+        WoodenStructureAdapter woodenStructureAdapter = new WoodenStructureAdapter(woodenHorse);
+        woodenStructureAdapter.move();
+        WoodenStructureAdapter newAdapter = (WoodenStructureAdapter) woodenStructureAdapter.mate(requestedAnimal);
+        System.out.println("New Replica: ");
+        newAdapter.move();
     }
 }

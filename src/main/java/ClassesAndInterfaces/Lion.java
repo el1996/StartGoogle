@@ -14,9 +14,9 @@ public class Lion extends AbstractAnimal{
     }
 
     @Override
-    public AbstractAnimal mate(AbstractAnimal partner) {
-
-        if (partner.getGender() != this.getGender()) {
+    public Animal mate(Animal partner) {
+        Lion lion = (Lion) partner;
+        if (lion.getGender() != this.getGender()) {
             return new Lion(createID(), generateRandomGender(), generateRandomWeight());
         }
 
