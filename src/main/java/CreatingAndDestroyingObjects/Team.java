@@ -7,10 +7,16 @@ import java.nio.file.Paths;
 import java.util.*;
 
 import CreatingAndDestroyingObjects.NameGenerator;
+import autovalue.shaded.com.google.common.annotations.VisibleForTesting;
 
 public class Team {
 
     private String name;
+
+    public  ArrayList<Player> getPlayers() {
+        return players;
+    }
+
     private static ArrayList<CreatingAndDestroyingObjects.Player> players;
 
     private final int DEFAULT_SIZE = 11;
@@ -32,6 +38,7 @@ public class Team {
     public  int generateGrade(){
         return generateRandomNumber(101);
     }
+
     public  int generateJersey(){
         boolean flag = false;
         int num = generateRandomNumber(60);

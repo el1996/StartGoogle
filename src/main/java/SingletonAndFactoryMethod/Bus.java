@@ -1,8 +1,15 @@
 package SingletonAndFactoryMethod;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 public class Bus implements Vehicle{
+
+    private static Logger logger = LogManager.getLogger(Plane.class.getName());
+
     public Bus(int busId) {
         this.busId = busId;
+        logger.info("Created Bus: " + busId);
     }
 
     private int busId;

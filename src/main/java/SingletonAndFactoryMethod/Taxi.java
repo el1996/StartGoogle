@@ -1,10 +1,17 @@
 package SingletonAndFactoryMethod;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 public class Taxi implements Vehicle{
+
+    private static Logger logger = LogManager.getLogger(Plane.class.getName());
+
     private int taxiId;
 
     public Taxi(int taxiId) {
         this.taxiId = taxiId;
+        logger.info("Created Taxi: " + taxiId);
     }
 
     @Override

@@ -9,7 +9,7 @@ public class Name implements Cloneable, Comparable<Name> {
     private String lastName;
 
     private Name(String prefix, String firstName, String lastName) {
-
+       // Thread.dumpStack();
         this.prefix = prefix;
         this.firstName = firstName;
         this.lastName = lastName;
