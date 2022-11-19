@@ -1,8 +1,13 @@
 package SingletonAndFactoryMethod;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import java.util.concurrent.atomic.AtomicInteger;
 
 public class VehicleFactory {
+
+    private static Logger logger = LogManager.getLogger(VehicleFactory.class.getName());
     private static VehicleFactory single_instance = null;
 
     private static AtomicInteger count = new AtomicInteger();
@@ -18,7 +23,7 @@ public class VehicleFactory {
     }
 
 
-        enum VehicleType{PLANE,TAXI,BUS,BOAT}
+        enum VehicleType{PLANE,TAXI,BUS,BOAT,GANDOLA}
         public static Vehicle createVehicle(VehicleType type){
             switch (type){
                 case PLANE:
@@ -30,6 +35,7 @@ public class VehicleFactory {
                 case BOAT:
                     return new Boat(count.getAndIncrement());
                 default:
+                    logger.error("Vehicle type not supported: " + type);
                     throw new IllegalArgumentException(String.format("Vehicle type not supported: %s", type));
             }
         }
